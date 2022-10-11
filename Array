@@ -1,0 +1,20 @@
+using static System.Console;
+
+string[] nomes = { "Pedro", "Renan", "Fabiano", "Thiago", "Luiz" };
+string nomesss;
+
+WriteLine("Digite um novo nome");
+nomesss = ReadLine();
+WriteLine();
+List<string> outronome = new List<string>(nomes.ToList());
+outronome.Add(nomesss);
+nomes = outronome.ToArray();
+Array.Sort(nomes);
+WriteLine("O tanto de arrays são:" + nomes.Length);
+WriteLine();
+WriteLine("Os nomes são:");
+foreach (string item in nomes)
+{
+    WriteLine(item);
+}
+
